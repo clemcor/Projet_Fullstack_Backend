@@ -1,0 +1,19 @@
+POST http://localhost:3000/createProject 
+Content-Type: application/json
+
+{
+    "titre":"Projet Fullstack",
+    "descriptionIntro":"Projet Fullstack",
+    "description":"Projet Fullstack",
+    "ListeMotCle":["Projet Fullstack"],
+    "lienImage":"https://www.google.com",
+    "lienGitHub":"https://www.google.com",
+    "listeImmages":["https://www.google.com"],
+    "nbVue":0
+
+    
+}
+
+###
+
+
