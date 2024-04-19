@@ -16,4 +16,18 @@ Content-Type: application/json
 
 ###
 
+PUT http://localhost:3000/api/projects/6621342a7c30cb64430a26ea
+Content-Type: application/json
+
+{
+    "titre":"Projet Fullstackclement",
+    "descriptionIntro":"Projet Fullstack",
+    "description":"Projet Fullstack",
+    "ListeMotCle":["Projet Fullstack"],
+    "lienImage":"https://www.google.com",
+    "lienGitHub":"https://www.google.com",
+    "listeImmages":["https://www.google.com"],
+    "nbVue":0
+}
+
 

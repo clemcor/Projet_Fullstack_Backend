@@ -1,14 +1,16 @@
 const express = require('express');
+require('dotenv').config();
 const app = express();
 var cors = require('cors')
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 const getRoutes = require('./routes/routes');
 
 
 //connect to database
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/Projet_Fullstack').then(() => console.log('Connected to database'));
+mongoose.connect(process.env.MONGODB_URI).then(() => console.log('Connected to database'));
+
 
 
 

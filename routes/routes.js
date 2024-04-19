@@ -37,6 +37,7 @@ module.exports = function getRoutes() {
         res.send(projects);
     });
 
+
     router.post('/api/projects', async function (req, res) {
         
 
@@ -52,6 +53,25 @@ module.exports = function getRoutes() {
         console.log(project);
         res.send(project);
     });
+
+    //modifier un projet
+
+    router.put('/api/projects/:id', async function (req, res) {
+        const id = req.params.id;
+        const titre = req.body.titre;
+        const descriptionIntro = req.body.descriptionIntro;
+        const description = req.body.description;
+        const ListeMotCle = req.body.ListeMotCle;
+        const lienImage = req.body.lienImage;
+        const lienGitHub = req.body.lienGitHub;
+        const listeImmages = req.body.listeImmages;
+        const nbVue = req.body.nbVue;
+        const project = await service_project.modifyProject(id, titre, descriptionIntro, description, ListeMotCle, lienImage, lienGitHub, listeImmages, nbVue);
+        res.send(project);
+    }
+    );
+    
+
 
     router.delete('/api/projects/:id', async function (req, res) {
         const id = req.params.id;

@@ -37,6 +37,20 @@ exports.deleteProject = async function (id){
     console.log('Project deleted');
 }
 
+exports .modifyProject = async function (id, title, descriptionIntro, description, ListeMotCle, linkImg, lienGitHub, listeImmages, nbVue){
+    const project = await mongooseProject.findById(id);
+    project.titre = title;
+    project.descriptionIntro = descriptionIntro;
+    project.description = description;
+    project.ListeMotCle = ListeMotCle;
+    project.lienImage = linkImg;
+    project.lienGitHub = lienGitHub;
+    project.listeImmages = listeImmages;
+    project.nbVue = nbVue;
+    await project.save();
+    return project;
+}
+
 
 
 
